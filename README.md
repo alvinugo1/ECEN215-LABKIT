@@ -1,7 +1,7 @@
 # ECEN215-LABKIT
 This README file provides an overview of the Microcontroller (MCU) subsystem used in the project. The MCU subsystem was validated to fulfill the criteria needed to support the logical and processing needs of the other subsystems. This includes communicating at most 2 bytes of data between the MCU and Sensor subsystem via SPI, and communicating 14 bits of data via SPI and I2C to the Power and Signal generation subsystem. All of which is controlled via commands from the Application subsystem via UART communication.
 
-The validation process involved a combined final validation of all integrated subsystems' requirements and was done with the use of if-else statements to switch between SPI and I2C protocols via command from a console. For example, when the command "I2C" is sent to the PIC microcontroller via UART it prints 6 bytes of data "howdy!" via I2C. Similarly, the command "SPI" triggers the PIC microcontroller to print "n" bytes of the data transferred from the client device.
+The validation process involved a combined final validation of all integrated subsystems' requirements and was done with the use of if-else statements to switch between SPI and I2C protocols via command from a console. For example, when the command "I2C" is sent to the PIC microcontroller via UART it prints 6 bytes of data "howdy!" from the connected arduino via I2C. Similarly, the command "SPI" triggers the PIC microcontroller to print "n" bytes of the data transferred from the client device.
 
 The PIC32 is configured via C code using the XC32 compiler on MPLAB X. This IDE was used for the configuration of all the communication protocols of the MCU subsystem which were programmed as standalone projects without the use of Harmony.
 
